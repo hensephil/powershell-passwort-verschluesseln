@@ -1,8 +1,8 @@
+::: Erstellt am 23.03.2021 - Philipp Hense - Zentrale IT NES :::
 @echo off
 
 cd \
 mkdir \temp\Passwort-Verschluesseln
-robocopy "%USERPROFILE%\Downloads\Passwort Verschluesseln\source" "%SYSTEMDRIVE%\temp\Passwort-Verschluesseln" -e
+robocopy "%USERPROFILE%\Downloads\powershell-passwort-verschluesseln-master\source" "%SYSTEMDRIVE%\temp\Passwort-Verschluesseln" -e
 
-
-timeout 50 /nobreak
+robocopy "%SYSTEMDRIVE%\temp\Passwort-Verschluesseln\Passwort-verschlüsseln.lnk" "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\\Start Menu\Programs"
