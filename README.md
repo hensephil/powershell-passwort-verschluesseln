@@ -25,9 +25,14 @@ Achtung der Pfad muss schon exestieren
 
 Das war es im Grunde schon um das Passwort später dann wieder auszulesen benötigen Sie folgende Befehle.
 
+
+Entschlüsselung:
+
 $username = "Administrator"
 
-$password = Get-Content Dateipfad_den_Sie_angegeben_haben\passwort.txt | ConvertTo-SecureString
+$key = (3,4,2,3,6,2,1,1,2,3,2,4,3,1,4,2)
+
+$password = get-content ("Dateipfad_den_Sie_angegeben_haben\passwort.txt") | convertto-securestring -key $key
 
 $credentials = New-Object System.Management.Automation.PSCredential (“$username”, $password)
 
